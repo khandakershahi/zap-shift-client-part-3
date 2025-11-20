@@ -12,7 +12,7 @@ const PrivateRoute = ({children}) => {
 
   
   if(loading){
-    return <div>
+    return <div className='max-w-7xl mx-auto'>
       <span className="loading loading-infinity loading-xl"></span>
     </div>
   }

@@ -25,6 +25,9 @@ const Navbar = () => {
         <NavLink to="/about">About Us</NavLink>
       </li>
       <li>
+        <NavLink to="/send-percel">Send Percel</NavLink>
+      </li>
+      <li>
         <NavLink to="/coverage">Coverage</NavLink>
       </li>
     </>

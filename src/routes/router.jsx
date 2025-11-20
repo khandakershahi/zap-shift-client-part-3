@@ -7,6 +7,7 @@ import Login from "../pages/Auth/Login/Login";
 import Register from "../pages/Auth/Register/Register";
 import PrivateRoute from "./PrivateRoute";
 import Rider from "../pages/Rider/Rider";
+import SendPercel from "../pages/sendParcel/SendPercel";
 
 export const router = createBrowserRouter([
   {
@@ -22,9 +23,14 @@ export const router = createBrowserRouter([
         element: <PrivateRoute><Rider></Rider></PrivateRoute>
       },
       {
-        path:'/coverage',
+        path:'coverage',
         loader: () => fetch('/serviceCenters.json').then(res=> res.json()),
         Component: Coverage,
+      },
+      {
+        path: 'send-percel',
+        element: <PrivateRoute><SendPercel></SendPercel></PrivateRoute>,
+          loader: () => fetch('/serviceCenters.json').then(res=> res.json()),
       }
     ]
   },
